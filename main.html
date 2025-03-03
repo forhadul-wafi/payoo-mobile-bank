@@ -23,11 +23,11 @@
             <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
             <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
-                <div class="box border p-4 text-center rounded">
+                <div id="add-money-box" class="box border p-4 text-center rounded">
                     <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
                     <h3>Add money</h3>
                 </div>
-                <div class="box border p-4 text-center rounded">
+                <div id="cash-out-box" class="box border p-4 text-center rounded">
                     <img class="w-8 mx-auto" src="./assets/send1.png" alt="">
                     <h3>Cash Out</h3>
                 </div>
@@ -48,12 +48,13 @@
                     <h3>Transactions</h3>
                 </div>
             </div>
-            <section>
-                <h2>Add money</h2>
+            <!-- add money section -->
+            <section id="addMoney">             
                 <div class="">
                     <div class="hero-content flex-col lg:flex-row-reverse">
                       <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                         <div class="card-body">
+                            <h2 class="font-bold">Add money</h2>
                             <legend>Select a Bank</legend>
                             <select class="select">
                                 <option disabled selected>Select Bank</option>
@@ -79,9 +80,35 @@
                     </div>
                   </div>
             </section>
+             <!-- cashout section --> 
+            <section id="cashOut">      
+            <div class="">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                    <div class="card-body">
+                          <fieldset class="fieldset">
+                            <h2 class="font-bold">Cash Out</h2>
+                            <label class="fieldset-label">Agent Number</label>
+                            <input value="01705894794" id="agent-number" type="number" class="input" placeholder="Enter Agent Number" required/>
+
+                            <label class="fieldset-label">Amount</label>
+                            <input id="cashOut-amount" type="number" class="input" placeholder="Enter Amount" required/>
+
+                            <label class="fieldset-label">PIN</label>
+                            <input value="1234" id="cashOut-pin" type="text" class="input" placeholder="type pin" required/>
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <button id="cash-out" class="btn btn-neutral bg-blue-700 mt-4">Cash Out</button>
+                          </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
         </section>
     </header>
    </section>
    <script src="./scripts/addMoney.js"></script>
+   <script src="./scripts/toggle.js"></script>
+   <script src="./scripts/cashOut.js"></script>
 </body>
 </html>
