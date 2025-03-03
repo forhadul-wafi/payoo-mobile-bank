@@ -23,7 +23,7 @@
             <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
             <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
-                <div id="add-money-box" class="box border p-4 text-center rounded">
+                <div id="add-money-box" class="box border p-4 text-center rounded ">
                     <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
                     <h3>Add money</h3>
                 </div>
@@ -43,7 +43,7 @@
                     <img class="w-8 mx-auto" src="./assets/purse1.png" alt="">
                     <h3>Pay Bill</h3>
                 </div>
-                <div class="box border p-4 text-center rounded">
+                <div id="transaction-box" class="box border p-4 text-center rounded">
                     <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
                     <h3>Transactions</h3>
                 </div>
@@ -56,7 +56,7 @@
                         <div class="card-body">
                             <h2 class="font-bold">Add money</h2>
                             <legend>Select a Bank</legend>
-                            <select class="select">
+                            <select id="selectBank" class="selectedBank">
                                 <option disabled selected>Select Bank</option>
                                 <option value="bkash">Bkash</option>
                                 <option value="nagad">Nagad</option>
@@ -104,11 +104,21 @@
                 </div>
               </div>
             </section>
+            <!-- Transaction section -->
+            <section id="transaction-history">
+              <h1 class="text-3xl font-bold text-red-400 text-center p-3">Transaction History</h1>
+              <div id="transaction-container">
+
+              </div>
+
+            </section>
         </section>
     </header>
    </section>
+   <script src="./utilities/togglle.js"></script>
+   <script src="./utilities/utilities.js"></script>
    <script src="./scripts/addMoney.js"></script>
-   <script src="./scripts/toggle.js"></script>
    <script src="./scripts/cashOut.js"></script>
+   <script src="./scripts/transactionHistory.js"></script>
 </body>
 </html>
